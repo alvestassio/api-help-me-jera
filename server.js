@@ -13,6 +13,6 @@ app.use('/api/v1/tag', require('./src/route/tag-route'));
 app.use('/api/v1/user', require('./src/route/user-route'));
 app.use('/api/v1/question', require('./src/route/question-route'));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log('HTTP Server listening');
 });
