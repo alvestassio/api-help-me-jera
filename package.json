@@ -4,6 +4,7 @@
   "description": "Project developed for Jera Hackathon",
   "main": "server.js",
   "scripts": {
+    "deploy": "node server.js",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
