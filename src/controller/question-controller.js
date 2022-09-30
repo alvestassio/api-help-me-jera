@@ -5,8 +5,8 @@ const questionRepository = require('../repository/question-repository');
 exports.create = async (req, res) => {
   try {
     let params = req.body;
-    params.userId = 4;
-    params.tagId = 4;
+    params.userId = 1;
+    params.tagId = 1;
 
     const question = await questionRepository.create(params);
 
