@@ -1,13 +1,25 @@
 'use strict'
 
-exports.create = async (params) => {
-  const user = await User.create(params);
+exports.create = (params) => {
+  const user = User.create(params);
 
   return user;
 };
 
-exports.getByEmail = async (email) => {
-  const user = await User.findOne({ where: { email } });
+exports.update = (params, id) => {
+  const response = User.update(params, { where: { id } });
+
+  return response;
+};
+
+exports.getByEmail = (email) => {
+  const user = User.findOne({ where: { email }, raw: true });
+
+  return user;
+};
+
+exports.getByToken = (token) => {
+  const user = User.findOne({ where: { token }, raw: true });
 
   return user;
 };

@@ -8,6 +8,8 @@ const sequelize = new Sequelize({
   dialect: "mysql",
 });
 
+// const sequelize = new Sequelize('mysql://b55621f0b69bbc:73b2931d@us-cdbr-east-06.cleardb.net/heroku_bccfe217a74219b?reconnect=true');
+
 sequelize
   .authenticate()
   .then(() => {

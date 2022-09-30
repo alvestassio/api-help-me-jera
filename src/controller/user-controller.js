@@ -15,7 +15,7 @@ exports.create = async (req, res) => {
 
     const user = await userRepository.create(params);
 
-    res.status(200).send({ message: 'Usuário criado com sucesso!', data: user });
+    res.status(200).send({ message: 'Usuário criado com sucesso', data: user });
   } catch (error) {
     res.status(500).send({ message: 'Algo deu errado ao processar a requisição', error: error.message });
   }

@@ -30,6 +30,10 @@ module.exports = db.sequelize.define(
       team: {
         type: Sequelize.INTEGER,
         required: true
+      },
+      token: {
+        type: Sequelize.STRING,
+        defaultValue: '' 
       }
     }
   );
