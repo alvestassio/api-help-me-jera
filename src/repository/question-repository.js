@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 exports.create = (params) => {
   const question = Question.create(params);
@@ -7,7 +7,10 @@ exports.create = (params) => {
 };
 
 exports.listAll = () => {
-  const questions = Question.findAll({ order: [['createdAt', 'DESC']] });
+  const questions = Question.findAll({
+    include: [Tag, User],
+    order: [["createdAt", "DESC"]],
+  });
 
   return questions;
 };

@@ -5,8 +5,8 @@ const questionController = require('../controller/question-controller');
 const express = require('express');
 const router = express.Router();
 
-router.post('/', authorize, questionController.create);
-router.get('/', authorize, questionController.listAll);
-router.get('/:id', authorize, questionController.getById);
+router.post('/', questionController.create);
+router.get('/', questionController.listAll);
+router.get('/:id', questionController.getById);
 
 module.exports = router;

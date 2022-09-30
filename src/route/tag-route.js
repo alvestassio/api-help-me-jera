@@ -6,6 +6,6 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/', authorize, tagController.create);
-router.get('/', authorize, tagController.listAll);
+router.get('/', tagController.listAll);
 
 module.exports = router;
