@@ -21,6 +21,16 @@ exports.create = async (req, res) => {
   }
 };
 
+exports.listAll = async (req, res) => {
+  try {
+    const users = await userRepository.listAll();
+
+    res.status(200).send(users);
+  } catch (error) {
+    res.status(500).send({ message: 'Algo deu errado ao processar a requisição', error: error.message });
+  }
+};
+
 async function userExists(email) {
   const user = await userRepository.getByEmail(email);
 

@@ -12,6 +12,12 @@ exports.update = (params, id) => {
   return response;
 };
 
+exports.listAll = () => {
+  const users = User.findAll();
+
+  return users;
+};
+
 exports.getByEmail = (email) => {
   const user = User.findOne({ where: { email }, raw: true });
 
